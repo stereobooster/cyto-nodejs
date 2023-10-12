@@ -7,3 +7,7 @@ Can be used like this:
 ```
 npx @stereobooster/cyto-nodejs -s g2.json -d g2.png
 ```
+
+## TODO
+
+- [ ] github actions to run tests
