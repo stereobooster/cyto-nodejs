@@ -1,5 +1,5 @@
 {
-  "name": "cyto-nodejs",
+  "name": "@stereobooster/cyto-nodejs",
   "version": "0.0.1",
   "description": "Render graphs on the server side with Cytoscape.js, getting image file as output",
   "keywords": [
