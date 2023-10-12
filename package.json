@@ -4,8 +4,7 @@
   "description": "Render graphs on the server side with Cytoscape.js, getting image file as output",
   "keywords": [
     "cytoscape.js",
-    "cytoscape",
-    "tauri"
+    "cytoscape"
   ],
   "license": "MIT",
   "repository": "stereobooster/cyto-nodejs",
