@@ -1,0 +1,40 @@
+{
+  "name": "cyto-nodejs",
+  "version": "0.0.1",
+  "description": "Render graphs on the server side with Cytoscape.js, getting image file as output",
+  "keywords": [
+    "cytoscape.js",
+    "cytoscape",
+    "tauri"
+  ],
+  "license": "MIT",
+  "repository": "stereobooster/cyto-nodejs",
+  "author": "stereooboster",
+  "type": "module",
+  "files": [
+    "index.js"
+  ],
+  "bin": "bin/cyto-nodejs.js",
+  "main": "index.js",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "test": "node test/index.test.js"
+  },
+  "dependencies": {
+    "canvas": "^2.11.2",
+    "commander": "^11.0.0",
+    "cytoscape": "^3.26.0",
+    "cytoscape-svg": "^0.4.0",
+    "jsdom": "^22.1.0",
+    "w3c-xmlserializer": "^4.0.0"
+  },
+  "devDependencies": {
+    "cytoscape-avsdf": "^1.0.0",
+    "cytoscape-cola": "^2.5.1",
+    "cytoscape-dagre": "^2.5.0",
+    "cytoscape-elk": "^2.2.0",
+    "cytoscape-klay": "^3.1.4"
+  }
+}
