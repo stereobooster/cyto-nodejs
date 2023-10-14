@@ -5,7 +5,7 @@ Render graphs on the server side with Cytoscape.js, getting image file as output
 Can be used like this:
 
 ```
-npx @stereobooster/cyto-nodejs -s g2.json -d g2.png
+npx @stereobooster/cyto-nodejs -s g2.json -d g2.svg
 ```
 
 ## TODO
