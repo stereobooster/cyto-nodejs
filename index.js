@@ -1,14 +1,17 @@
 import { spawn } from "node:child_process";
-
-const executablePath = `bin/cyto-nodejs.js`;
+import { fileURLToPath } from "url";
+import { dirname } from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const executablePath = `${__dirname}/bin/cyto-nodejs.js`;
 
 export const cytoSnap = (src, dst) => {
   return new Promise((resolve, reject) => {
     const srcStdin = typeof src !== "string";
     const args = [];
     let res = "";
-    if (!srcStdin) args.push("-s", "test/" + src);
-    if (dst) args.push("-d", "test/" + dst);
+    if (!srcStdin) args.push("-s", src);
+    if (dst) args.push("-d", dst);
 
     const bin = spawn(executablePath, args, {
       windowsHide: true,
@@ -23,6 +26,9 @@ export const cytoSnap = (src, dst) => {
         reject(`child process exited with code ${code}`);
       }
     });
-    if (srcStdin) bin.stdin.write(JSON.stringify(src));
+    if (srcStdin) {
+      bin.stdin.write(JSON.stringify(src));
+      bin.stdin.end();
+    }
   });
 };
